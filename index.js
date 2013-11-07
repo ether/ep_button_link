@@ -40,6 +40,5 @@ exports.clientVars = function(hook, context, callback){
     }
   } catch (e){
   }
-  console.warn(ep_button_link);
   return callback({ep_button_link: ep_button_link});
 };

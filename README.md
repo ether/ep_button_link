@@ -11,7 +11,7 @@ Add the following to your settings.json
   text: "Hello world",
   link: "http://whatever.com",
   classes: "grouped-left",
-  before: "timesliderlink"
+  before: "#timesliderlink"
 }
 ```
 text = The text of the button, also supports HTML
