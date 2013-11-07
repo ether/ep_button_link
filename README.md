@@ -8,10 +8,10 @@ Edit settings in settings.json
 Add the following to your settings.json
 ```
 "ep_button_link": { 
-  text = "Hello world",
-  link = "http://whatever.com,
-  classes = "grouped-left",
-  before = "timesliderlink"
+  text: "Hello world",
+  link: "http://whatever.com",
+  classes: "grouped-left",
+  before: "timesliderlink"
 }
 ```
 text = The text of the button, also supports HTML
