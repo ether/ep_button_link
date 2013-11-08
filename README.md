@@ -11,10 +11,14 @@ Add the following to your settings.json
   text: "Hello world",
   link: "http://whatever.com",
   classes: "grouped-left",
-  before: "#timesliderlink"
+  before: "#timesliderlink",
+  after: "#timesliderlink"
 }
 ```
 text = The text of the button, also supports HTML
 link = Where to link to
 classes = the css classes to apply to the button link
-before = The element to apply the button before in the DOM
+before = The element to drwa the button before in the DOM
+after = The element to draw the button after in the DOM
+
+Use either before or after..

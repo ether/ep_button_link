@@ -18,15 +18,20 @@ exports.clientVars = function(hook, context, callback){
        }
        if(!settings.ep_button_link.before){
          ep_button_link.before = "#timesliderlink";
-         console.warn("No before set for ep_button_link, add ep_button_link.before to settings.json");
+         console.info("No before set for ep_button_link, this may be intentional, add ep_button_link.before to settings.json");
        }else{
          ep_button_link.before = settings.ep_button_link.before;
        }
        if(!settings.ep_button_link.classes){
          ep_button_link.classes = "grouped-left";
-         console.warn("No classes set for ep_button_link, add ep_button_link.classes to settings.json");
+         console.info("No classes set for ep_button_link, this may be intentional, add ep_button_link.classes to settings.json");
        }else{
          ep_button_link.classes = settings.ep_button_link.classes;
+       }
+       if(!settings.ep_button_link.after){
+         console.info("No after set for ep_button_link, this may be intentional, add ep_button_link.classes to settings.json");
+       }else{
+         ep_button_link.after = settings.ep_button_link.after;
        }
 
     }else{
