@@ -38,7 +38,7 @@ exports.clientVars = function(hook, context, callback){
       ep_button_link = {};
       ep_button_link.link = "https://github.com/JohnMcLear/ep_button_link";
       ep_button_link.text = "NO TEXT SET";
-      ep_button_link.before = "#timesliderlink";
+      ep_button_link.before = ".buttonicon-history";
       ep_button_link.classes = "grouped-right";
       console.warn("No link set for ep_button_link, add ep_button_link.link to settings.json");
       console.warn("No text set for ep_button_link, add ep_button_link.text to settings.json");
