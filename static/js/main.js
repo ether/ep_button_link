@@ -10,11 +10,12 @@ exports.postAceInit = function(hook_name, args) {
   var classes = clientVars.ep_button_link.classes;
 
   var button = "<li><a class='"+classes+"' target='_blank' href='"+link+"'><span id='ep_button_link_span' class='buttonicon'>" + text + "</span></a></li>";
+  var $editBar = $("#editbar");
 
   if(after){
-    $(after).parent().parent().after(button);
+    $editBar.contents().find(after).after(button);
   }else{
-    $(before).parent().parent().before(button);
+    $editBar.contents().find(before).before(button);
   }
 
   $('#ep_button_link_span').css({"background-image":"none", "width": "auto", "color":"#666", "font-size":"16px", "margin-top":"-3px"});
