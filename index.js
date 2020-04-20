@@ -17,7 +17,7 @@ exports.clientVars = function(hook, context, callback){
          ep_button_link.text = settings.ep_button_link.text;
        }
        if(!settings.ep_button_link.before){
-         ep_button_link.before = "#timesliderlink";
+         ep_button_link.before = "[data-key='showTimeSlider']";
          console.info("No before set for ep_button_link, this may be intentional, add ep_button_link.before to settings.json");
        }else{
          ep_button_link.before = settings.ep_button_link.before;
@@ -35,6 +35,7 @@ exports.clientVars = function(hook, context, callback){
        }
 
     }else{
+      console.warn('Set ep_button_link settings in settings.json, example is: "ep_button_link":{ "link" : "https://github.com/JohnMcLear/ep_button", "text": "TEST"}');
       ep_button_link = {};
       ep_button_link.link = "https://github.com/JohnMcLear/ep_button_link";
       ep_button_link.text = "NO TEXT SET";

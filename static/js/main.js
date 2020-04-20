@@ -18,5 +18,5 @@ exports.postAceInit = function(hook_name, args) {
     $editBar.contents().find(before).before(button);
   }
 
-  $('#ep_button_link_span').css({"background-image":"none", "width": "auto", "color":"#666", "font-size":"16px", "margin-top":"-3px"});
+  $('#ep_button_link_span').css({"background-image":"none", "width": "auto", "color":"#666", "font-size":"16px", "font-weight":"800" });
 }
