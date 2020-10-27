@@ -10,5 +10,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/JohnMcLear/ep_button_link.git"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "http://etherpad.org/"
   }
 }
