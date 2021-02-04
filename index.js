@@ -1,6 +1,8 @@
+'use strict';
+
 const settings = require('ep_etherpad-lite/node/utils/Settings');
 
-exports.clientVars = function (hook, context, callback) {
+exports.clientVars = (hook, context, callback) => {
   let ep_button_link = {};
   try {
     if (settings.ep_button_link) {
@@ -18,18 +20,21 @@ exports.clientVars = function (hook, context, callback) {
       }
       if (!settings.ep_button_link.before) {
         ep_button_link.before = "[data-key='showTimeSlider']";
-        console.info('No before set for ep_button_link, this may be intentional, add ep_button_link.before to settings.json');
+        console.info('No before set for ep_button_link, this may be intentional, ' +
+          'add ep_button_link.before to settings.json');
       } else {
         ep_button_link.before = settings.ep_button_link.before;
       }
       if (!settings.ep_button_link.classes) {
         ep_button_link.classes = 'grouped-left';
-        console.info('No classes set for ep_button_link, this may be intentional, add ep_button_link.classes to settings.json');
+        console.info('No classes set for ep_button_link, this may be intentional, ' +
+        'add ep_button_link.classes to settings.json');
       } else {
         ep_button_link.classes = settings.ep_button_link.classes;
       }
       if (!settings.ep_button_link.after) {
-        console.info('No after set for ep_button_link, this may be intentional, add ep_button_link.classes to settings.json');
+        console.info('No after set for ep_button_link, this may be intentional,' +
+        ' add ep_button_link.classes to settings.json');
       } else {
         ep_button_link.after = settings.ep_button_link.after;
       }
@@ -44,6 +49,7 @@ exports.clientVars = function (hook, context, callback) {
       console.warn('No text set for ep_button_link, add ep_button_link.text to settings.json');
     }
   } catch (e) {
+    // lovely try catch me if you can
   }
   return callback({ep_button_link});
 };

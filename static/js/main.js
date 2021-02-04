@@ -1,4 +1,6 @@
-exports.postAceInit = function (hook_name, args) {
+'use strict';
+
+exports.postAceInit = (hookName, args) => {
   // if the button already exists, don't write it again..
   if ($('#ep_button_link_span').length !== 0) return;
 
@@ -8,7 +10,11 @@ exports.postAceInit = function (hook_name, args) {
   const after = clientVars.ep_button_link.after;
   const classes = clientVars.ep_button_link.classes;
 
-  const button = `<li><a class='${classes}' target='_blank' href='${link}'><span id='ep_button_link_span' class='buttonicon'>${text}</span></a></li>`;
+  const button = `<li>
+      <a class='${classes}' target='_blank' href='${link}'>
+        <span id='ep_button_link_span' class='buttonicon'>${text}</span>
+      </a>
+    </li>`;
   const $editBar = $('#editbar');
 
   if (after) {
@@ -17,5 +23,11 @@ exports.postAceInit = function (hook_name, args) {
     $editBar.contents().find(before).before(button);
   }
 
-  $('#ep_button_link_span').css({'background-image': 'none', 'width': 'auto', 'color': '#666', 'font-size': '16px', 'font-weight': '800'});
+  $('#ep_button_link_span').css({
+    'background-image': 'none',
+    'width': 'auto',
+    'color': '#666',
+    'font-size': '16px',
+    'font-weight': '800',
+  });
 };
