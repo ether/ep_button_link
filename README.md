@@ -1,5 +1,3 @@
-![Publish Status](https://github.com/ether/ep_button_link/workflows/Node.js%20Package/badge.svg) ![Publish Status](https://github.com/ether/ep_button_link/workflows/Node.js%20Package/badge.svg)
-
 # Add a button to the toolbar
 
 ## Installation
