@@ -1,3 +1,5 @@
+![Publish Status](https://github.com/ether/ep_button_link/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_button_link/workflows/Backend%20tests/badge.svg)
+
 # Add a button to the toolbar
 
 ## Installation
