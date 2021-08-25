@@ -7,7 +7,7 @@ exports.postAceInit = (hookName, args) => {
       .append($('<a>')
           .addClass(classes)
           .attr({href: link, target: '_blank', rel: 'noopener noreferrer'})
-          .append($('<span>')
+          .append($('<button>')
               .addClass('buttonicon')
               .css({
                 backgroundImage: 'none',
