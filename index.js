@@ -8,8 +8,8 @@ const logger = log4js.getLogger('ep_button_link');
 exports.clientVars = async (hookName, context) => {
   const {ep_button_link = {}} = settings;
   if (!ep_button_link.link) {
-    logger.warn('Missing link; set ep_button_link.link in settings.json.');
-    ep_button_link.link = 'https://github.com/JohnMcLear/ep_button_link';
+    logger.warn('Missing ep_button_link.link in settings.json; no button will be displayed.');
+    return {};
   }
   if (ep_button_link.after && ep_button_link.before) {
     logger.warn('Ignoring ep_button_link.before because .after is set in settings.json.');

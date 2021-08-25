@@ -1,7 +1,9 @@
 'use strict';
 
 exports.postAceInit = (hookName, args) => {
-  const {link, text = '', before, after, classes} = clientVars.ep_button_link;
+  const settings = clientVars.ep_button_link;
+  if (!settings) return;
+  const {link, text = '', before, after, classes} = settings;
 
   const button = $('<li>')
       .append($('<a>')
