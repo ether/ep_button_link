@@ -9,6 +9,7 @@ exports.postAceInit = (hookName, args) => {
           .attr({href: link, target: '_blank', rel: 'noopener noreferrer'})
           .append($('<button>')
               .addClass('buttonicon')
+              .addClass('buttonicon-ep_button_link')
               .html(text)));
   const $editBar = $('#editbar');
 
