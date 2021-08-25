@@ -11,10 +11,6 @@ exports.clientVars = async (hookName, context) => {
     logger.warn('Missing link; set ep_button_link.link in settings.json.');
     ep_button_link.link = 'https://github.com/JohnMcLear/ep_button_link';
   }
-  if (!ep_button_link.text) {
-    logger.warn('Missing text; set ep_button_link.text in settings.json.');
-    ep_button_link.text = 'NO TEXT SET';
-  }
   if (ep_button_link.after && ep_button_link.before) {
     logger.warn('Ignoring ep_button_link.before because .after is set in settings.json.');
     delete ep_button_link.before;

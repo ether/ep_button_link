@@ -26,7 +26,7 @@ Example configuration in `settings.json`:
 
 Available settings:
 * `link`: Required. URL to open in a new window/tab.
-* `text`: Required. HTML to put inside the button.
+* `text`: Optional, defaults to the empty string. HTML to put inside the button.
 * `classes`: Optional, defaults to `"grouped-left"`. Space-separated classes to
   apply to the button link.
 * `before`: Optional, defaults to `"[data-key='showTimeSlider']"`. CSS selector
