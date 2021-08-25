@@ -1,9 +1,6 @@
 'use strict';
 
 exports.postAceInit = (hookName, args) => {
-  // if the button already exists, don't write it again..
-  if ($('#ep_button_link_span').length !== 0) return;
-
   const link = clientVars.ep_button_link.link;
   const text = clientVars.ep_button_link.text;
   const before = clientVars.ep_button_link.before;
