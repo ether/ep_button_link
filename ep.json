@@ -6,7 +6,8 @@
         "aceInitialized": "ep_button_link/static/js/main:postAceInit"
       },
       "hooks": {
-        "clientVars":"ep_button_link/index:clientVars"
+        "clientVars": "",
+        "loadSettings": ""
       }
     }
   ]
