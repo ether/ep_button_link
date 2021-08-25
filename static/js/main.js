@@ -1,11 +1,7 @@
 'use strict';
 
 exports.postAceInit = (hookName, args) => {
-  const link = clientVars.ep_button_link.link;
-  const text = clientVars.ep_button_link.text;
-  const before = clientVars.ep_button_link.before;
-  const after = clientVars.ep_button_link.after;
-  const classes = clientVars.ep_button_link.classes;
+  const {link, text, before, after, classes} = clientVars.ep_button_link;
 
   const button = `<li>
       <a class='${classes}' target='_blank' href='${link}'>
