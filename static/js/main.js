@@ -1,6 +1,7 @@
 'use strict';
 
-exports.postAceInit = (hookName, args) => {
+// clientVars defaults to window.clientVars for compatibility with older versions of Etherpad.
+exports.postAceInit = (hookName, {clientVars = window.clientVars}) => {
   const settings = clientVars.ep_button_link;
   if (!settings) return;
   const {link, newWindow = true, text = '', title, before, after, classes} = settings;
