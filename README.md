@@ -1,26 +1,52 @@
 ![Publish Status](https://github.com/ether/ep_button_link/workflows/Node.js%20Package/badge.svg) ![Backend Tests Status](https://github.com/ether/ep_button_link/workflows/Backend%20tests/badge.svg)
 
-# Add a button to the toolbar
+# ep_button_link
+
+[Etherpad](https://etherpad.org) plugin that adds a button to the toolbar.
 
 ## Installation
-1. Install using /admin/plugins or npm install ep_button_link
-2. Edit settings in settings.json
+
+Install via `/admin/plugins` or by running:
+
+```shell
+cd /path/to/etherpad
+npm install --no-save --legacy-peer-deps ep_button_link
+```
 
 ## Configuration
-Add the following to your settings.json
-```
-"ep_button_link": { 
-  "text": "Hello world",
-  "link": "http://whatever.com",
-  "classes": "grouped-left",
-  "before": "li[data-key='showTimeSlider']",
-  "after": "li[data-key='showTimeSlider']"
-}
-```
-text = The text of the button, also supports HTML  
-link = Where to link to  
-classes = the css classes to apply to the button link  
-before = The element to draw the button before in the DOM  
-after = The element to draw the button after in the DOM
 
-Use either before or after..
+Example configuration in `settings.json`:
+
+```json
+  "ep_button_link": {
+    "link": "http://whatever.com",
+    "text": "Hello world"
+  }
+```
+
+Available settings:
+* `link`: Required. URL to open in a new window/tab.
+* `text`: Required. HTML to put inside the button.
+* `classes`: Optional, defaults to `"grouped-left"`. Space-separated classes to
+  apply to the button link.
+* `before`: Optional, defaults to `"[data-key='showTimeSlider']"`. CSS selector
+  for a toolbar element. The button will be placed before this element. Ignored
+  if `after` is set.
+* `after`: Optional, defaults to unset. CSS selector for a toolbar element. If
+  set, the new button will be placed after this element. Overrides `before`.
+
+## Copyright and License
+
+Copyright © 2020 John McLear <john@mclear.co.uk>\
+Copyright © 2021 Richard Hansen <rhansen@rhansen.org>
+
+Licensed under the [Apache License, Version 2.0](LICENSE) (the "License"); you
+may not use this file except in compliance with the License. You may obtain a
+copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
