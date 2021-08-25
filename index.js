@@ -21,9 +21,6 @@ exports.clientVars = async (hookName, context) => {
   } else if (!ep_button_link.after && !ep_button_link.before) {
     ep_button_link.before = "[data-key='showTimeSlider']";
   }
-  if (!ep_button_link.classes) {
-    logger.info('Missing classes; set ep_button_link.classes in settings.json.');
-    ep_button_link.classes = 'grouped-left';
-  }
+  if (!ep_button_link.classes) ep_button_link.classes = 'grouped-left';
   return {ep_button_link};
 };
