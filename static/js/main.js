@@ -3,11 +3,20 @@
 exports.postAceInit = (hookName, args) => {
   const {link, text, before, after, classes} = clientVars.ep_button_link;
 
-  const button = `<li>
-      <a class='${classes}' target='_blank' href='${link}'>
-        <span id='ep_button_link_span' class='buttonicon'>${text}</span>
-      </a>
-    </li>`;
+  const button = $('<li>')
+      .append($('<a>')
+          .addClass(classes)
+          .attr({href: link, target: '_blank'})
+          .append($('<span>')
+              .addClass('buttonicon')
+              .css({
+                backgroundImage: 'none',
+                width: 'auto',
+                color: '#666',
+                fontSize: '16px',
+                fontWeight: '800',
+              })
+              .html(text)));
   const $editBar = $('#editbar');
 
   if (after) {
@@ -15,12 +24,4 @@ exports.postAceInit = (hookName, args) => {
   } else {
     $editBar.contents().find(before).before(button);
   }
-
-  $('#ep_button_link_span').css({
-    'background-image': 'none',
-    'width': 'auto',
-    'color': '#666',
-    'font-size': '16px',
-    'font-weight': '800',
-  });
 };
