@@ -25,7 +25,9 @@ Example configuration in `settings.json`:
 ```
 
 Available settings:
-* `link`: Required. URL to open in a new window/tab.
+* `link`: Required. URL to visit.
+* `newWindow`: Optional, defaults to true. If true, clicking on the button opens
+  the link in a new window or tab.
 * `text`: Optional, defaults to the empty string. HTML to put inside the button.
 * `classes`: Optional, defaults to `"grouped-left"`. Space-separated classes to
   apply to the button link.

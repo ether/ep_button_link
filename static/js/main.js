@@ -3,12 +3,13 @@
 exports.postAceInit = (hookName, args) => {
   const settings = clientVars.ep_button_link;
   if (!settings) return;
-  const {link, text = '', before, after, classes} = settings;
+  const {link, newWindow = true, text = '', before, after, classes} = settings;
 
   const button = $('<li>')
       .append($('<a>')
           .addClass(classes)
-          .attr({href: link, target: '_blank', rel: 'noopener noreferrer'})
+          .attr('href', link)
+          .attr(newWindow ? {target: '_blank', rel: 'noopener noreferrer'} : {})
           .append($('<button>')
               .addClass('buttonicon')
               .addClass('buttonicon-ep_button_link')
