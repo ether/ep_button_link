@@ -5,7 +5,7 @@ const settings = require('ep_etherpad-lite/node/utils/Settings');
 
 const logger = log4js.getLogger('ep_button_link');
 
-exports.clientVars = (hook, context, callback) => {
+exports.clientVars = async (hookName, context) => {
   const {ep_button_link = {}} = settings;
   if (!ep_button_link.link) {
     logger.warn('Missing link; set ep_button_link.link in settings.json.');
@@ -25,5 +25,5 @@ exports.clientVars = (hook, context, callback) => {
     logger.info('Missing classes; set ep_button_link.classes in settings.json.');
     ep_button_link.classes = 'grouped-left';
   }
-  return callback({ep_button_link});
+  return {ep_button_link};
 };
