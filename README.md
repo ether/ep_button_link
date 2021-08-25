@@ -29,6 +29,8 @@ Available settings:
 * `newWindow`: Optional, defaults to true. If true, clicking on the button opens
   the link in a new window or tab.
 * `text`: Optional, defaults to the empty string. HTML to put inside the button.
+* `title`: Optional, defaults to unset. If set, `title` and `aria-label`
+  attributes with the given value are added to the button.
 * `classes`: Optional, defaults to `"grouped-left"`. Space-separated classes to
   apply to the button link.
 * `before`: Optional, defaults to `"[data-key='showTimeSlider']"`. CSS selector
