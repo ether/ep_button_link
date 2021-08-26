@@ -2,7 +2,7 @@
 
 # ep_button_link
 
-[Etherpad](https://etherpad.org) plugin that adds a button to the toolbar.
+[Etherpad](https://etherpad.org) plugin to add custom buttons to the toolbar.
 
 ## Installation
 
@@ -24,7 +24,25 @@ Example configuration in `settings.json`:
   }
 ```
 
-Available settings:
+Or you can specify a list of buttons:
+
+```json
+  "ep_button_link": {
+    "buttons": [
+      {
+        "link": "https://example.com",
+        "text": "A button"
+      },
+      {
+        "link": "https://example.org",
+        "text": "Another button"
+      }
+    ]
+  }
+```
+
+Available settings per button:
+
 * `link`: Required. URL to visit.
 * `newWindow`: Optional, defaults to true. If true, clicking on the button opens
   the link in a new window or tab.
