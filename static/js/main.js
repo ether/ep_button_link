@@ -7,10 +7,10 @@ exports.postAceInit = (hookName, {clientVars = window.clientVars}) => {
     console.warn('For more help https://github.com/ether/ep_button_link');
   }
   const buttons = (clientVars.ep_button_link && clientVars.ep_button_link.buttons) || [{
-      text: 'Pad Link',
-      link: location.href,
-      before: '[data-key="showTimeSlider"]',
-      classes: 'grouped-left',
+    text: 'Pad Link',
+    link: location.href,
+    before: '[data-key="showTimeSlider"]',
+    classes: 'grouped-left',
   }];
   const $editBar = $('#editbar');
   for (const button of buttons) {
