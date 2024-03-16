@@ -1,7 +1,7 @@
 {
   "name": "ep_button_link",
   "description": "Adds a button to the toolbar that links out to a new window",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "author": "johnyma22 (John McLear) <john@mclear.co.uk>",
   "dependencies": {},
   "engines": {
