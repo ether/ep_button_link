@@ -10,7 +10,7 @@ Install via `/admin/plugins` or by running:
 
 ```shell
 cd /path/to/etherpad
-npm install --no-save --legacy-peer-deps ep_button_link
+pnpm run plugins install ep_button_link
 ```
 
 ## Configuration
