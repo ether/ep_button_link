@@ -1,6 +1,6 @@
 ![Demo](demo.gif) [![Backend Tests Status](https://github.com/ether/ep_button_link/actions/workflows/test-and-release.yml/badge.svg)](https://github.com/ether/ep_button_link/actions/workflows/test-and-release.yml)
 
-# ep_button_link
+# Toolbar Button Links for Etherpad
 
 [Etherpad](https://etherpad.org) plugin to add custom buttons to the toolbar.
 
