@@ -1,7 +1,7 @@
 {
   "name": "ep_button_link",
   "description": "Adds a button to the toolbar that links out to a new window",
-  "version": "1.0.49",
+  "version": "1.0.50",
   "author": "johnyma22 (John McLear) <john@mclear.co.uk>",
   "engines": {
     "node": ">=18.0.0"
@@ -22,5 +22,8 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
+  },
+  "dependencies": {
+    "ep_plugin_helpers": "^0.6.7"
   }
 }

@@ -1,8 +1,8 @@
 'use strict';
 
-const log4js = require('ep_etherpad-lite/node_modules/log4js');
+const {createLogger} = require('ep_plugin_helpers/logger');
 
-const logger = log4js.getLogger('ep_button_link');
+const logger = createLogger('ep_button_link');
 let settings = null;
 
 exports.clientVars = async (hookName, context) => ({ep_button_link: settings});
